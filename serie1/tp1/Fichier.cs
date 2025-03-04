@@ -15,4 +15,12 @@ public class Fichier {
     }
 
 
+    public void Renommer(string nvNom){
+    this.Nom=nvNom;
+}
+
+    public void Modifier(float nvTaille){
+        this.Taille=nvTaille;
+    }
+
 }
