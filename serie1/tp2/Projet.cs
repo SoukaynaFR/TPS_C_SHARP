@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 public class Projet {
     public int Code { get; set; }
@@ -31,6 +30,26 @@ public class Projet {
     {
         return programmeurs.FirstOrDefault(p => p.ID == id);
     }
+
+public void AjouterProgrammeurDepuisConsole()
+{
+    Console.WriteLine("Ajout d'un nouveau programmeur :");
+
+    Console.Write("ID : ");
+    int id = int.Parse(Console.ReadLine());
+
+    Console.Write("Nom : ");
+    string nom = Console.ReadLine();
+
+    Console.Write("Prénom : ");
+    string prenom = Console.ReadLine();
+
+    Console.Write("Numéro de bureau : ");
+    int bureau = int.Parse(Console.ReadLine());
+
+    Programmeur nouveauProgrammeur = new Programmeur(id, nom,prenom , bureau);
+    AjouterProgrammeur(nouveauProgrammeur);
+}
 
 
     public void SupprimerProgrammeur(int id)
